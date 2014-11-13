@@ -19,6 +19,8 @@ app.get('/*', function(req, res) {
 	res.sendFile(__dirname + '/index.html')
 });
 
+env.port = process.env.PORT || env.port;
+
 var http = require("http");
 http.createServer(app).listen(env.port);
 
