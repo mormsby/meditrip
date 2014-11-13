@@ -1,7 +1,7 @@
-var app = angular.module('App', 
+var app = angular.module('MTApp', 
 [
 	'snap', 'toaster', 'ngRoute','ngResource','ngTouch','angular-carousel', 'angularSpinner',
-  'toaster', 'ui.bootstrap', 'app.constants'
+  'toaster', 'ui.bootstrap', 'MTApp.constants'
 ]);
 
 app.config(['$routeProvider', function($routeProvider) {
@@ -21,7 +21,6 @@ app.config(['$provide','$httpProvider', function($provide, $httpProvider) {
   $provide.factory('httpInterceptor', ['$q', 'toaster', function($q, toaster){
     return {
       'response': function(response) {
-        console.log(response);
         return response || $q.when(response);
       },
       'responseError': function(rejection) {

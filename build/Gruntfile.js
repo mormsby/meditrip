@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     },
     html2js: {
       options: {
-        module: 'FSPartials',
+        module: 'MTPartials',
         base: '../src/'    
       },
       main: {

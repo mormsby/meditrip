@@ -1,4 +1,4 @@
-angular.module('App').directive('clickLink', ['$location', function($location) {
+angular.module('MTApp').directive('clickLink', ['$location', function($location) {
 	/**
 	 * clickLink is use to faciliate app navigation where href are not applicable
 	 * e.g. href cannot be used on <button> tags
@@ -15,7 +15,7 @@ angular.module('App').directive('clickLink', ['$location', function($location) {
 }]);
 
 
-angular.module('App').directive('match',['$parse',function($parse){
+angular.module('MTApp').directive('match',['$parse',function($parse){
 	/**
 	 * match is used to compare too fields to be equal.
 	 * e.g. password and password confirmation field.

@@ -77,16 +77,13 @@
         <script type="text/javascript" src="vendor/ui-bootstrap-tpls-0.10.0.min.js"></script>
         
         <script type="text/javascript">
-
-			phone.initialize();
-
 			/* The following script below is used to initialize
 			 * kinvey and manually bootstrap the angular application
 			 * after kinvey has been initialized
 			 */
 			
 			/*
-			var $injector = angular.injector(['ng', 'kinvey', 'app.constants']);		
+			var $injector = angular.injector(['ng', 'kinvey', 'MTApp.constants']);		
 
 			$injector.invoke(['$kinvey', 'CONST','URI_PATH', function($kinvey, CONST, URI_PATH) {
 			    $kinvey.init({
@@ -99,7 +96,7 @@
 			}]);
 			*/
 			angular.element(document).ready(function() {
-		      angular.bootstrap(document, ['App']);
+		      angular.bootstrap(document, ['MTApp']);
 		    });
         </script>
     </body>

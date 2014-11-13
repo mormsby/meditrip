@@ -37,7 +37,7 @@ var URI_PATH = {
     root: "/"
 };
 
-angular.module('app.constants', []).
+angular.module('MTApp.constants', []).
     constant('CONST', CONST).
     constant('ERROR_MSG', ERROR_MSG).
     constant('URI_PATH', URI_PATH);
