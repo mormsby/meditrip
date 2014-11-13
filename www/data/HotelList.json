@@ -4,7 +4,7 @@ callback=angular.callbacks._0([
 	    "hotelName": "Ms. Ormsby House",
         "type" : "Bed&Breakfast",
     	"currency": "JMD",
-        "cost": "150",
+        "cost": 10,
     	"description": "sadf asdfo adsfo as", 
     	"ownerDetails":[
     			{
@@ -20,7 +20,7 @@ callback=angular.callbacks._0([
     			"id":0,
     			"medicalFacility": "KPH Hospital", 
                 "medicalProcedures": "Blood Test, Urinalysis, Electrocorticography",
-    			"distance": "0.5", 
+    			"distance": 0.5, 
     			"unit": "km"
     		}],
     	"rating" : 5.5,
@@ -38,7 +38,7 @@ callback=angular.callbacks._0([
 	    "hotelName": "Ms. Mclaren House",
         "type" : "Hotel",
     	"currency": "JMD",
-        "cost": "150",
+        "cost": 80,
     	"description": "", 
     	"ownerDetails":[
     			{
@@ -54,7 +54,7 @@ callback=angular.callbacks._0([
     			"id":0,
     			"medicalFacility": "General Hospital", 
                 "medicalProcedures": "Radiography, Heat therapy, Pediatric Surgery",
-    			"distance": "", 
+    			"distance": 4, 
     			"unit": "km"
     		}],
     	"rating" : 5.5,
@@ -73,7 +73,7 @@ callback=angular.callbacks._0([
 	    "hotelName": "Mr. Solomon's Mansion",
         "type" : "Hotel",
     	"currency": "JMD",
-        "cost": "150",
+        "cost": 50,
     	"description": "", 
     	"ownerDetails":[
     			{
@@ -89,7 +89,7 @@ callback=angular.callbacks._0([
     			"id":0,
     			"medicalFacility": "Kings Hospital", 
                 "medicalProcedures": "Ophthalmologic, Neurotology, Plastic Surgery",
-    			"distance": "2", 
+    			"distance": 7, 
     			"unit": "km"
     		}],
     	"rating" : 10,
@@ -105,7 +105,7 @@ callback=angular.callbacks._0([
 	    "hotelName": "Ms. TP Mansion",
         "type" : "Bed&Breakfast",
     	"currency": "JMD",
-        "cost": "150",
+        "cost": 70,
     	"description": "", 
     	"ownerDetails":[
     			{
@@ -121,7 +121,7 @@ callback=angular.callbacks._0([
     			"id":0,
     			"medicalFacility": "CP Hospital", 
                 "medicalProcedures": "Colon and Rectal Surgery, Pediatric Surgery",
-    			"distance": "10.4", 
+    			"distance": 10.4, 
     			"unit": "km"
     		}],
     	"rating" : 4.5,
