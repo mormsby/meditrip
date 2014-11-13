@@ -28,6 +28,5 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 
-/www/lib/
 npm-debug.log
 .sass-cache/
