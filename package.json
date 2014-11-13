@@ -1,12 +1,15 @@
 {
-    "name": "Medi-Trip",
-    "version": "0.0.1",
-    "description": "My Blue Nav Javascript",
-    "main": "www/server.js",
-    "engines": {
-        "node": "0.10.26"
-    },
-    "scripts": {
-        "start" : "node www/server.js"
-    }
+  "name": "Medi-Trip",
+  "version": "0.0.1",
+  "description": "",
+  "main": "www/server.js",
+  "engines": {
+    "node": "0.10.26"
+  },
+  "scripts": {
+    "start": "node www/server.js"
+  },
+  "dependencies": {
+    "express": "4.10.2"
+  }
 }
