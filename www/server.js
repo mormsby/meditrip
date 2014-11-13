@@ -18,7 +18,6 @@ var app = express();
 app.use('/', express.static(__dirname + '/'));
 app.use('/hotelList', function(req, res) {
 	fs.readFile( __dirname + '/data/HotelList.json', 'utf8', function (err,data) {
-		console.log('ERROR',err);
 		
 		if (err) {
 			console.log('Returning data: ',data);
