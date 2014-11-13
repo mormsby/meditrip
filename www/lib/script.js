@@ -115,7 +115,7 @@ angular.module("MTApp").factory("DataService", [ "$q", "$log", "$http", "$locati
         deferred.resolve($http.jsonp(DATA_PATH.hotelList));
         return deferred.promise;
     };
-    var searchHotelList = function() {
+    var searchHotelList = function(searchQuery) {
         var results = getHotelList();
     };
     return {

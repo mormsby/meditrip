@@ -1,5 +1,6 @@
 angular.module('MTApp').factory('DataService',['$q','$log', '$http', '$location'/*, 'DATA_PATH'*/, function($q, $log, $http,$location/*, DATA_PATH*/){
-	
+
+	//Return the list of hotel and the associated data.
 	var getHotelList = function() {
 		 var deferred = $q.defer();
 		 deferred.resolve(
@@ -8,7 +9,8 @@ angular.module('MTApp').factory('DataService',['$q','$log', '$http', '$location'
 		     return deferred.promise;  
 	};
 
-	var searchHotelList = function() {
+	//Will be used to search the hotel based on name
+	var searchHotelList = function(searchQuery) {
 		var results = getHotelList();
 	}
 

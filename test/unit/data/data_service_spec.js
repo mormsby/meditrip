@@ -1,6 +1,7 @@
 'use strict';
 
 describe('DataService', function(){
+    var module;
 	var scope, $httpBackend;//we'll use these in our tests
 	var mockDataJson = [
 		{
@@ -24,22 +25,25 @@ describe('DataService', function(){
     			"distance": "", 
     			"unit": "km"
     		}],
-    	"rating" : 5.5,
-	}
-	];
+    	"rating" : 5.5
+	}];
 
+    beforeEach(function(){
+        module = angular.module('MTApp', ['ngRoute']);
 
-	beforeEach(angular.mock.module('MTApp'));
+    })
 
-	beforeEach(angular.mock.inject(function($rootScope, $controller, _$httpBackend_){
-     
-       $httpBackend = _$httpBackend_;
-       $httpBackend.when('JSONP', '').respond(mockDataJson);
+	
+
+	beforeEach(function($rootScope){
+     //   console.log(module);
+       // $httpBackend = _$httpBackend_;
+       // $httpBackend.when('JSONP', '').respond(mockDataJson);
  	
         //create an empty scope
        scope = $rootScope.$new();
 
-    }));
+   });
 	 
 	iit("should have constant", function(){
 		expect(DATA_PATH).toBeDefined();

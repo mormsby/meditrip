@@ -1,8 +1,7 @@
 angular.module('MTApp').controller('HomeController',['$scope','$location', 'DataService'/*,'LoginService', 'ERROR_MSG', 'toaster', 'CommonService'*/, function($scope, $location, DataService/*, LoginService, ERROR_MSG, toaster, CommonService*/){
 	
 	$scope.hotels;	//Store the list of hotels
-	// console.log("welcome");
-
+	
 	//Get the data from hotels json file
 	$scope.setupHospitalData = function (){
     	 DataService.getHotelList()
