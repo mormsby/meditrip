@@ -1,4 +1,4 @@
-angular.module('App').factory('LoginService',['$location', function($location){
+angular.module('MTApp').factory('LoginService',['$location', function($location){
 
 	var userLogin = function(user, onSuccessCallBack, onFailCallBack) {
 
