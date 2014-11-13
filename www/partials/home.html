@@ -1,0 +1,18 @@
+<ul rn-carousel class="image">
+	<li ng-repeat="slide in images"><img src = {{slide.src}} /></li>
+</ul>
+<div class="panel panel-success">
+		<div class="panel-heading">
+			<center>News Feed</center>
+		</div>
+</div>
+
+
+<div id="" style="overflow-y: scroll; height:50%;margin-top:-5%;">
+<accordion close-others="oneAtATime">
+    <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+    	<img style="float:left;margin-right:5%;" src="{{group.src}}" alt="placeholder" height="35" width="35" />
+      {{group.content}}
+    </accordion-group>
+  </accordion>
+</div>

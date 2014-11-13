@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+
+		<link rel="stylesheet" type="text/css" href="lib/style.css" />
+		
+		<link href="vendor/angular-carousel/angular-carousel.min.css" rel="stylesheet" type="text/css" />
+        <link href="vendor/angular-snap/angular-snap.min.css" rel="stylesheet" type="text/css" />
+        <link href="vendor/angular-toaster/toaster.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="vendor/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="vendor/bootstrap/bootstrap-theme.min.css">
+        <script type="text/javascript" src="vendor/snap.min.js"></script>
+		
+		<title>App</title>
+	</head>
+
+    <body ng-controller="CommonCtrl">
+        <div snap-drawers ng-if="showCarousel">
+		  <div snap-drawer>
+		  	<div class="table-responsive">
+			  <table class="table">
+			    <tbody>
+			    	<tr> Item 1 </tr>
+			    </tbody>
+			  </table>
+			</div>
+		  </div>
+		  <div snap-drawer="right">
+		    <div class="table-responsive">
+			  <table class="table">
+			  	<thead>
+			  		<th class=" borderless success"> Title </th>
+			  	</thead>
+			    <tbody>
+			    	<tr   snap-close> 
+			    		<td> Item 1 </td>
+		    		</tr>
+			    </tbody>
+			  </table>
+			</div>
+		  </div>
+		</div>
+	    <snap-content ng-if="showCarousel">
+	      <div ng-include="'partials/header.html'"></div>
+	      
+	      <div ng-view>
+          </div>
+	    </snap-content>
+
+	    <div ng-if="!showCarousel">
+	      <div ng-include="'partials/header.html'"></div>
+	      
+	      <div ng-view>
+          </div>
+	    </div>
+
+        <!-- 
+        <script type="text/javascript" src="phonegap.js"></script>
+        -->
+        
+        <script type="text/javascript" src="vendor/angular.min.js"></script>
+        <script type="text/javascript" src="vendor/angular-touch.min.js"></script>
+        <script type="text/javascript" src="vendor/angular-carousel/angular-carousel.min.js"></script>
+        <script type="text/javascript" src="vendor/angular-spinner.js"></script>
+        <script type="text/javascript" src="vendor/spin.js"></script>
+        <script type="text/javascript" src="vendor/angular-snap/angular-snap.min.js"></script>
+        <script type="text/javascript" src="vendor/angular-animate.min.js" ></script>
+        <script type="text/javascript" src="vendor/angular-toaster/toaster.js"></script>
+        <script type="text/javascript" src="vendor/angular-route.min.js"></script>
+        <script type="text/javascript" src="vendor/angular-resource.min.js"></script>
+        <script type="text/javascript" src="lib/partials.js"></script>
+        <script type="text/javascript" src="lib/script.js"></script>
+        <script type="text/javascript" src="vendor/kinvey-angular-1.1.4.min.js"></script>
+        <script type="text/javascript" src="vendor/ui-bootstrap-tpls-0.10.0.min.js"></script>
+        
+        <script type="text/javascript">
+			/* The following script below is used to initialize
+			 * kinvey and manually bootstrap the angular application
+			 * after kinvey has been initialized
+			 */
+			
+			/*
+			var $injector = angular.injector(['ng', 'kinvey', 'MTApp.constants']);		
+
+			$injector.invoke(['$kinvey', 'CONST','URI_PATH', function($kinvey, CONST, URI_PATH) {
+			    $kinvey.init({
+			        appKey    : CONST.appKey,
+			        appSecret : CONST.appSecret
+			    }).then(function() {
+			        angular.bootstrap(document, ['App']);
+			    }, function() {
+			    });
+			}]);
+			*/
+			angular.element(document).ready(function() {
+		      angular.bootstrap(document, ['MTApp']);
+		    });
+        </script>
+    </body>
+</html>
