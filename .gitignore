@@ -1,8 +1,4 @@
 /www/lib/
 /build/npm-debug.log
-/.cordova
-/merges
-/platforms
-/.project
 /build/.sass-cache/
 /build/node_modules/
