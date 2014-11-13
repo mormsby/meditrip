@@ -5,7 +5,7 @@ var environments = {
 		port: 8888
 	},
 	heroku: {
-		port: 8081
+		port: 80
 	}
 };
 environments.development = environments.local; 
