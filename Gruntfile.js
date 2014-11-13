@@ -60,8 +60,8 @@ module.exports = function(grunt) {
     },
     watch: {
       karma: {
-        files: ['src/js/**/*.js','test/**/*.js'],
-        tasks: ['karma:live:run'] //NOTE the :run flag
+        files: ['src/js/*.js','src/js/**/*.js','src/partials/*.html','src/partials/**/*.html','test/**/*.js'],
+        tasks: ['uglify:dist','html2js','compass:dist'] 
       }
     }
   });
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['karma:unit']);
-  grunt.registerTask('build', ['uglify:dist','html2js','compass:dist']);
-  grunt.registerTask('test', ['karma:live','watch']);
+  grunt.registerTask('build', ['uglify:dist','html2js','compass:dist', 'watch']);
+  //grunt.registerTask('test', ['karma:live','watch']);
 
 };
