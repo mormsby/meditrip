@@ -1,1 +1,1 @@
-web: node www/server.js 443
+web: NODE_ENV=heroku node www/server.js
