@@ -1,0 +1,95 @@
+callback=angular.callbacks._0([
+	{
+		"id": 1, 
+	    "hotelName": "Ms. Ormsby House",
+    	"currency": "JMD",
+    	"description": "sadf asdfo adsfo as", 
+    	"ownerDetails":[
+    			{
+    				"ownerName": "Ormsby mother", 
+    				"tele1": "12321321", 
+    				"tele2": " 23o 2o3 ",
+    				"email1": "sapdofnaso@gmail.com", 
+    				"email2":""
+    			}] , 
+    	"address": "", 
+    	"distance":[
+    		{
+    			"id":0,
+    			"medicalFacility": "", 
+    			"distance": "", 
+    			"unit": "km"
+    		}],
+    	"rating" : 5.5,
+	},
+	{
+		"id": 2, 
+	    "hotelName": "Ms. Mclaren House",
+    	"currency": "JMD",
+    	"description": "", 
+    	"ownerDetails":[
+    			{
+    				"ownerName": "", 
+    				"tele1": "", 
+    				"tele2": "",
+    				"email1": "", 
+    				"email2":""
+    			}] , 
+    	"address": "", 
+    	"distance":[
+    		{
+    			"id":0,
+    			"medicalFacility": "", 
+    			"distance": "", 
+    			"unit": "km"
+    		}],
+    	"rating" : 5.5,
+	},
+	{
+		"id": 3, 
+	    "hotelName": "Mr. Solomon's Mansion",
+    	"currency": "JMD",
+    	"description": "", 
+    	"ownerDetails":[
+    			{
+    				"ownerName": "", 
+    				"tele1": "", 
+    				"tele2": "",
+    				"email1": "", 
+    				"email2":""
+    			}] , 
+    	"address": "", 
+    	"distance":[
+    		{
+    			"id":0,
+    			"medicalFacility": "", 
+    			"distance": "", 
+    			"unit": "km"
+    		}],
+    	"rating" : 10,
+	},
+	{
+		"id": 4, 
+	    "hotelName": "Ms. TP Mansion",
+    	"currency": "JMD",
+    	"description": "", 
+    	"ownerDetails":[
+    			{
+    				"ownerName": "", 
+    				"tele1": "", 
+    				"tele2": "",
+    				"email1": "", 
+    				"email2":""
+    			}] , 
+    	"address": "", 
+    	"distance":[
+    		{
+    			"id":0,
+    			"medicalFacility": "", 
+    			"distance": "", 
+    			"unit": "km"
+    		}],
+    	"rating" : 4.5,
+	}
+
+])
