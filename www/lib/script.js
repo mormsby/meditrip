@@ -45,7 +45,7 @@ var DATA_PATH = {
 
 angular.module("MTApp.constants", []).constant("CONST", CONST).constant("ERROR_MSG", ERROR_MSG).constant("URI_PATH", URI_PATH).constant("DATA_PATH", DATA_PATH);
 
-angular.module("MTApp").controller("HomeController", [ "$scope", "$location", "DataService", function($scope, $location, DataService) {
+angular.module("MTApp").controller("HomeController", [ "$scope", "$location", "DataService", "$modal", function($scope, $location, DataService, $modal) {
     $scope.hotels;
     $scope.setupHospitalData = function() {
         DataService.getHotelList().then(function(response) {
@@ -56,8 +56,20 @@ angular.module("MTApp").controller("HomeController", [ "$scope", "$location", "D
             console.error(response);
         });
     };
+    $scope.open = function() {
+        var modalInstance = $modal.open({
+            templateUrl: "partials/myModalContent.html",
+            controller: "ModalInstanceCtrl"
+        });
+    };
     $scope.setupHospitalData();
 } ]);
+
+angular.module("MTApp").controller("ModalInstanceCtrl", function($scope, $modalInstance) {
+    $scope.ok = function() {
+        $modalInstance.dismiss("cancel");
+    };
+});
 
 angular.module("MTApp").controller("CommonCtrl", [ "$scope", "$location", "LoginService", "ERROR_MSG", "toaster", "CommonService", function($scope, $location, LoginService, ERROR_MSG, toaster, CommonService) {} ]);
 

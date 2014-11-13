@@ -1,4 +1,4 @@
-angular.module('MTApp').controller('HomeController',['$scope','$location', 'DataService'/*,'LoginService', 'ERROR_MSG', 'toaster', 'CommonService'*/, function($scope, $location, DataService/*, LoginService, ERROR_MSG, toaster, CommonService*/){
+angular.module('MTApp').controller('HomeController',['$scope','$location', 'DataService', '$modal', function($scope, $location, DataService, $modal){
 	
 	$scope.hotels;	//Store the list of hotels
 	
@@ -13,6 +13,13 @@ angular.module('MTApp').controller('HomeController',['$scope','$location', 'Data
 		 	 		console.error(response);
 		 	 	});
      };
+
+     $scope.open = function () {
+	   var modalInstance = $modal.open({
+	     templateUrl: 'partials/myModalContent.html',
+	     controller: 'ModalInstanceCtrl'
+	   });
+	 };
 
      $scope.setupHospitalData();
 }]);

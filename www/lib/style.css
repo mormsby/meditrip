@@ -237,3 +237,63 @@ h3, h4, h5 {
 .navbar-form.nav-search .input-group {
   width: 500px;
 }
+
+/* line 118, ../../src/scss/style.scss */
+.modal {
+  display: inherit !important;
+}
+
+/* line 121, ../../src/scss/style.scss */
+.modal-header {
+  border-bottom: none !important;
+}
+
+/* line 126, ../../src/scss/style.scss */
+.animate-enter {
+  -webkit-transition: 1s linear all;
+  /* Chrome */
+  transition: 1s linear all;
+  opacity: 0;
+}
+
+/* line 132, ../../src/scss/style.scss */
+.animate-enter.animate-enter-active {
+  opacity: 1;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes logoAnimation {
+  from {
+    -webkit-transform: rotateX(0deg);
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(360deg);
+    -webkit-transform: rotateY(360deg);
+  }
+}
+@-moz-keyframes logoAnimation {
+  from {
+    -moz-transform: rotateX(0deg);
+    -moz-transform: rotateY(0deg);
+  }
+  to {
+    -moz-transform: rotateX(360deg);
+    -moz-transform: rotateY(360deg);
+  }
+}
+/* Standard syntax */
+@keyframes logoAnimation {
+  from {
+    transform: rotateX(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg);
+    transform: rotateY(360deg);
+  }
+}
+/* line 166, ../../src/scss/style.scss */
+#logo {
+  -webkit-animation: logoAnimation 2s ease-in-out 5s infinite;
+}

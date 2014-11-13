@@ -114,3 +114,56 @@ h3,h4,h5 {
 		width: 500px;
 	}
 }
+
+.modal {
+	display: inherit !important;
+}
+.modal-header {
+	border-bottom: none !important;
+}
+
+
+.animate-enter {
+  -webkit-transition: 1s linear all; /* Chrome */
+  transition: 1s linear all;
+  opacity: 0;
+}
+ 
+.animate-enter.animate-enter-active {
+  opacity: 1;
+}
+
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes logoAnimation {
+    from { -webkit-transform: rotateX(0deg);
+        -webkit-transform : rotateY(0deg);
+    }
+    to { -webkit-transform: rotateX(360deg);
+        -webkit-transform : rotateY(360deg);
+    }
+}
+
+@-moz-keyframes logoAnimation {
+  from { -moz-transform: rotateX(0deg);
+        -moz-transform : rotateY(0deg);
+    }
+    to { -moz-transform: rotateX(360deg);
+        -moz-transform : rotateY(360deg);
+    }
+}
+
+/* Standard syntax */
+@keyframes logoAnimation {
+    from { transform: rotateX(0deg);
+          transform : rotateY(0deg);
+    }
+    to { transform: rotateX(360deg);
+        transform : rotateY(360deg);
+    }
+}
+
+#logo{
+  -webkit-animation: logoAnimation 2s ease-in-out 5s infinite; 
+}
+
