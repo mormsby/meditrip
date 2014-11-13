@@ -12,12 +12,26 @@ environments.development = environments.local;
 
 var env = environments[envKey];
 var express = require('express');
+var fs = require('fs');
 
 var app = express();
 app.use('/', express.static(__dirname + '/'));
+app.use('/hotelList', function(req, res) {
+	fs.readFile( __dirname + '/data/HotelList.json', 'utf8', function (err,data) {
+		console.log('ERROR',err);
+		
+		if (err) {
+			console.log('Returning data: ',data);
+			return console.log("Unable to read data.. Oopss!! its a feature");
+		}
+		res.sendFile(__dirname + '/data/HotelList.json');
+	});
+});
 app.get('/*', function(req, res) {
 	res.sendFile(__dirname + '/index.html')
 });
+
+
 
 env.port = process.env.PORT || env.port;
 

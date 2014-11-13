@@ -2,6 +2,7 @@ var app = angular.module("MTApp", [ "snap", "toaster", "ngRoute", "ngResource", 
 
 app.config([ "$routeProvider", "$locationProvider", function($routeProvider, $locationProvider) {
     $routeProvider.when("/", {
+        controller: "HomeController",
         templateUrl: "/partials/home.html"
     });
     $routeProvider.otherwise({
@@ -13,6 +14,50 @@ app.config([ "$routeProvider", "$locationProvider", function($routeProvider, $lo
 angular.module("MTApp").constant("MTAppConstants", {
     gaKey: "UA-56699909-1"
 });
+
+var CONST = {
+    appKey: "kid_TVslN-7yHi",
+    appSecret: "62950f04922b41d5b836b8f4c470c4c6",
+    emptyString: ""
+};
+
+var ERROR_MSG = {
+    title: {
+        connectionError: "Connection Error"
+    },
+    type: {
+        error: "error",
+        warning: "warning",
+        success: "success",
+        info: "info"
+    },
+    loginFailed: "Login failed, please check your credentials",
+    connectionFailed: "Connection failed :( please check your wifi or data connection."
+};
+
+var URI_PATH = {
+    root: "/"
+};
+
+var DATA_PATH = {
+    hotelList: "/HotelList"
+};
+
+angular.module("MTApp.constants", []).constant("CONST", CONST).constant("ERROR_MSG", ERROR_MSG).constant("URI_PATH", URI_PATH).constant("DATA_PATH", DATA_PATH);
+
+angular.module("MTApp").controller("HomeController", [ "$scope", "$location", "DataService", function($scope, $location, DataService) {
+    $scope.hotels;
+    $scope.setupHospitalData = function() {
+        DataService.getHotelList().then(function(response) {
+            $scope.hotels = response.data;
+            console.log(response.data);
+        }, function(response) {
+            console.error("Unable to get the list of data");
+            console.error(response);
+        });
+    };
+    $scope.setupHospitalData();
+} ]);
 
 angular.module("MTApp").controller("CommonCtrl", [ "$scope", "$location", "LoginService", "ERROR_MSG", "toaster", "CommonService", function($scope, $location, LoginService, ERROR_MSG, toaster, CommonService) {} ]);
 
@@ -61,6 +106,20 @@ angular.module("MTApp").factory("CommonService", [ "$location", function($locati
     };
     return {
         prepUser: prepUser
+    };
+} ]);
+
+angular.module("MTApp").factory("DataService", [ "$q", "$log", "$http", "$location", function($q, $log, $http, $location) {
+    var getHotelList = function() {
+        var deferred = $q.defer();
+        deferred.resolve($http.jsonp(DATA_PATH.hotelList));
+        return deferred.promise;
+    };
+    var searchHotelList = function() {
+        var results = getHotelList();
+    };
+    return {
+        getHotelList: getHotelList
     };
 } ]);
 

@@ -3,6 +3,7 @@ callback=angular.callbacks._0([
 		"id": 1, 
 	    "hotelName": "Ms. Ormsby House",
     	"currency": "JMD",
+        "cost": "150",
     	"description": "sadf asdfo adsfo as", 
     	"ownerDetails":[
     			{
@@ -12,20 +13,29 @@ callback=angular.callbacks._0([
     				"email1": "sapdofnaso@gmail.com", 
     				"email2":""
     			}] , 
-    	"address": "", 
+    	"address": "12 Welcome true to the world", 
     	"distance":[
     		{
     			"id":0,
-    			"medicalFacility": "", 
-    			"distance": "", 
+    			"medicalFacility": "KPH Hospital", 
+    			"distance": "0.5", 
     			"unit": "km"
     		}],
     	"rating" : 5.5,
+        "images" : [
+            {
+                 "id" : 1,
+                 "title": "The image",
+                 "url":"img/hyatt-regency-trinidad.jpg"
+
+
+            }]
 	},
 	{
 		"id": 2, 
 	    "hotelName": "Ms. Mclaren House",
     	"currency": "JMD",
+        "cost": "150",
     	"description": "", 
     	"ownerDetails":[
     			{
@@ -35,20 +45,30 @@ callback=angular.callbacks._0([
     				"email1": "", 
     				"email2":""
     			}] , 
-    	"address": "", 
+    	"address": "King shango streen", 
     	"distance":[
     		{
     			"id":0,
-    			"medicalFacility": "", 
+    			"medicalFacility": "General Hospital", 
     			"distance": "", 
     			"unit": "km"
     		}],
     	"rating" : 5.5,
+        "images" : [
+            {
+                 "id" : 1,
+                 "title": "The image",
+                 "url":"img/hyatt-regency-trinidad.jpg"
+
+
+            }]
+
 	},
 	{
 		"id": 3, 
 	    "hotelName": "Mr. Solomon's Mansion",
     	"currency": "JMD",
+        "cost": "150",
     	"description": "", 
     	"ownerDetails":[
     			{
@@ -62,16 +82,25 @@ callback=angular.callbacks._0([
     	"distance":[
     		{
     			"id":0,
-    			"medicalFacility": "", 
+    			"medicalFacility": "Kings Hospital", 
     			"distance": "", 
     			"unit": "km"
     		}],
     	"rating" : 10,
+        "images" : [
+            {
+                 "id" : 1,
+                 "title": "The image",
+                 "url":"img/hyatt-regency-trinidad.jpg"
+
+
+            }]
 	},
 	{
 		"id": 4, 
 	    "hotelName": "Ms. TP Mansion",
     	"currency": "JMD",
+        "cost": "150",
     	"description": "", 
     	"ownerDetails":[
     			{
@@ -85,11 +114,20 @@ callback=angular.callbacks._0([
     	"distance":[
     		{
     			"id":0,
-    			"medicalFacility": "", 
+    			"medicalFacility": "CP Hospital", 
     			"distance": "", 
     			"unit": "km"
     		}],
     	"rating" : 4.5,
+        "images" : [
+            {
+                 "id" : 1,
+                 "title": "The image",
+                 "url":"img/hyatt-regency-trinidad.jpg"
+
+
+            }]
+
 	}
 
 ])

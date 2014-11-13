@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-fixed-top header">
+<nav class="navbar navbar-fixed-top header" >
  	<div class="col-md-12">
         <div class="navbar-header">
           
@@ -34,11 +34,11 @@
   <div class="row">
   	<div class="col-md-12"><h2>Search Results</h2></div>
       
-      <div class="col-md-6 col-sm-6">
+      <div class="col-md-6 col-sm-6" ng-repeat="hotel in hotels">
         <div class="panel panel-default">
            <div class="panel-heading">
             <h4 >
-              Big Ship Motel 
+             {{hotel.hotelName}} 
               <a href="#" class="pull-right btn btn-xs btn-info" ga-track-click ga-event-category="Booking" ga-event-action="Book" >
                 <span class="glyphicon glyphicon-calendar" style="color:white;"></span> 
                 Book Now 
@@ -50,15 +50,18 @@
               <div class="well well-sm">
                 <div class="media">
                     <a class="thumbnail pull-left" href="#">
-                        <img class="media-object" src="http://media-cdn.tripadvisor.com/media/photo-s/01/72/cf/e1/hyatt-regency-trinidad.jpg">
+                       <span ng-repeat="image in hotel.images">
+                               <img class="media-object"  alt="{{image.alt}}" src="{{image.url}}">
+                       </span>
                     </a>
                     <div class="media-body">
-                        <h1 class="pull-right"> $50 </h1>
+                        <h1 class="pull-right">${{hotel.cost}} </h1>
                         
                         <p> Located at: 
-                        47 Orange Road, San Juan, Puerto Rico </p>
+                        {{hotel.address}} </p>
                         <em>
-                          0.3 km from General Hospital
+                          <span ng-repeat="dist in hotel.distance">{{dist.distance}} {{dist.unit}} from {{dist.medicalFacility}}
+                          </span>
                         </em>
                         
                         <br/><br/>
@@ -82,7 +85,7 @@
          </div> 
       </div>
 
-      <div class="col-md-6 col-sm-6">
+      <!-- <div class="col-md-6 col-sm-6">
         <div class="panel panel-default">
            <div class="panel-heading">
             <h4>
@@ -130,7 +133,7 @@
                </div>
             </div>
          </div> 
-      </div>
+      </div> -->
 
     </div> <!-- end of search results panels -->
     

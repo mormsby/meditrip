@@ -4,7 +4,7 @@ var app = angular.module('MTApp', ['snap', 'toaster', 'ngRoute','ngResource','ng
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.when('/', {
-      //controller : 'HomeController',
+      controller : 'HomeController',
       templateUrl : '/partials/home.html'
     });
 
