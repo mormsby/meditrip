@@ -35,11 +35,12 @@
   	<div class="col-md-12"><h2>Search Results <span ng-show="query != null && query !=''">: {{query}}</span></h2></div>
       
       <div class="col-md-6 col-sm-6" ng-repeat="hotel in hotels | filter:query" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
+      <p class="" ng-show="hotels.length==0">No result found. Please contact us</p>
        <div class="panel panel-default">
            <div class="panel-heading">
             <h4>
              {{hotel.hotelName}} 
-              <a href="#" class="pull-right btn btn-xs btn-info" ga-track-click ga-event-category="Booking" ga-event-action="Book" ga-event-label="{{hotel.type}}" ng-click="open()">
+              <a href="#" class="pull-right btn btn-primary" ga-track-click ga-event-category="Booking" ga-event-action="Book" ga-event-label="{{hotel.type}}" ng-click="open()">
                 <span class="glyphicon glyphicon-calendar" style="color:white;"></span> 
                 Book Now 
               </a>
@@ -76,7 +77,7 @@
                          </p>-->
 
                          <p>
-                           <a href="#" class="pull-right btn btn-xs btn-default"><span class="glyphicon glyphicon-heart"></span> Favorite</a>
+                           <!-- <a href="#" class="pull-right btn btn-xs btn-default"><span class="glyphicon glyphicon-heart"></span> Favorite</a> -->
                         </p>
                     </div>
                     

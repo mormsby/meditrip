@@ -62,7 +62,7 @@ callback=angular.callbacks._0([
             {
                  "id" : 1,
                  "title": "The image",
-                 "url":"img/hyatt-regency-trinidad.jpg"
+                 "url":"//placehold.it/80"
 
 
             }]
@@ -97,7 +97,7 @@ callback=angular.callbacks._0([
             {
                  "id" : 1,
                  "title": "The image",
-                 "url":"img/download.jpg"
+                 "url":"//placehold.it/80"
             }]
 	},
 	{
@@ -129,7 +129,7 @@ callback=angular.callbacks._0([
             {
                  "id" : 1,
                  "title": "The image",
-                 "url":"img/hyatt-regency-trinidad.jpg"
+                 "url":"//placehold.it/80"
             }]
 	}
 ])
