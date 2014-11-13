@@ -87,7 +87,7 @@ angular.module("MTApp").directive("gaTrackClick", [ "$window", function($window)
                 var gaEvent = {
                     category: attrs.gaEventCategory,
                     action: attrs.gaEventAction,
-                    label: ""
+                    label: attrs.gaEventLabel
                 };
                 $window.ga("send", "event", gaEvent.category, gaEvent.action, gaEvent.label);
             });

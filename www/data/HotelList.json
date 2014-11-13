@@ -2,6 +2,7 @@ callback=angular.callbacks._0([
 	{
 		"id": 1, 
 	    "hotelName": "Ms. Ormsby House",
+        "type" : "Bed&Breakfast",
     	"currency": "JMD",
         "cost": "150",
     	"description": "sadf asdfo adsfo as", 
@@ -35,6 +36,7 @@ callback=angular.callbacks._0([
 	{
 		"id": 2, 
 	    "hotelName": "Ms. Mclaren House",
+        "type" : "Hotel",
     	"currency": "JMD",
         "cost": "150",
     	"description": "", 
@@ -69,6 +71,7 @@ callback=angular.callbacks._0([
 	{
 		"id": 3, 
 	    "hotelName": "Mr. Solomon's Mansion",
+        "type" : "Hotel",
     	"currency": "JMD",
         "cost": "150",
     	"description": "", 
@@ -100,6 +103,7 @@ callback=angular.callbacks._0([
 	{
 		"id": 4, 
 	    "hotelName": "Ms. TP Mansion",
+        "type" : "Bed&Breakfast",
     	"currency": "JMD",
         "cost": "150",
     	"description": "", 
