@@ -1,18 +1,189 @@
-<ul rn-carousel class="image">
-	<li ng-repeat="slide in images"><img src = {{slide.src}} /></li>
-</ul>
-<div class="panel panel-success">
-		<div class="panel-heading">
-			<center>News Feed</center>
-		</div>
+
+<nav class="navbar navbar-fixed-top header">
+ 	<div class="col-md-12">
+        <div class="navbar-header">
+          
+          <a href="#" class="navbar-brand">MediTrip</a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse1">
+          <i class="glyphicon glyphicon-search"></i>
+          </button>
+      
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse1">
+          <form class="navbar-form pull-left">
+              <div class="input-group" style="max-width:470px;">
+                <input type="text" class="form-control" placeholder="Enter your procedure" name="srch-term" id="srch-term">
+                <div class="input-group-btn">
+                  <button class="btn btn-default btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+              </div>
+          </form>
+          
+        </div>	
+     </div>	
+</nav>
+<div class="navbar navbar-default" id="subnav">
+    <div class="col-md-12">
+        
+     </div>	
+</div>
+
+<!--main-->
+<div class="container" id="main">
+  <div class="row">
+  	<div class="col-md-12"><h2>Search Results</h2></div>
+      
+      <div class="col-md-6 col-sm-6">
+        <div class="panel panel-default">
+           <div class="panel-heading">
+            <h4>Big Ship Motel</h4>
+          </div>
+           
+            <div class="panel-body">
+              <div class="well well-sm">
+                <div class="media">
+                    <a class="thumbnail pull-left" href="#">
+                        <img class="media-object" src="http://media-cdn.tripadvisor.com/media/photo-s/01/72/cf/e1/hyatt-regency-trinidad.jpg">
+                    </a>
+                    <div class="media-body">
+                        <h1 class="pull-right"> $50 </h1>
+                        
+                        <p> Located at: 
+                        47 Orange Road, San Juan, Puerto Rico </p>
+                        <em>
+                          0.3 km from General Hospital
+                        </em>
+                        
+                        <br/><br/>
+                         <p>Comments</p>
+            
+                         <p>
+                            <img src="http://api.randomuser.me/portraits/med/women/4.jpg" height="28px">
+                            <img src="http://api.randomuser.me/portraits/med/women/2.jpg" height="28px">
+                            <img src="http://api.randomuser.me/portraits/med/women/1.jpg" height="28px">
+                            <img src="http://api.randomuser.me/portraits/med/men/4.jpg" width="28px" height="28px">
+                         </p>
+
+                         <p>
+                           <a href="#" class="pull-right btn btn-xs btn-default"><span class="glyphicon glyphicon-heart"></span> Favorite</a>
+                        </p>
+                    </div>
+                    
+                </div>
+               </div>
+            </div>
+         </div> 
+      </div>
+
+      <div class="col-md-6 col-sm-6">
+        <div class="panel panel-default">
+           <div class="panel-heading">
+            <h4>Sweet Ma Bed &amp; Breakfast </h4>
+          </div>
+           
+            <div class="panel-body">
+              <div class="well well-sm">
+                <div class="media">
+                    <a class="thumbnail pull-left" href="#">
+                        <img class="media-object" src="http://media-cdn.tripadvisor.com/media/photo-s/01/72/cf/e1/hyatt-regency-trinidad.jpg">
+                    </a>
+                    <div class="media-body">
+                        <h1 class="pull-right"> $50 </h1>
+                        
+                        <p> Located at: 
+                        8 Pelican Way, Nassau, The Bahamas </p>
+                        <em>
+                          0.8 km from University Teaching Hospital
+                        </em>
+                        
+                        <br/><br/>
+
+                         <p>Comments</p>
+            
+                         <p>
+                            <img src="http://api.randomuser.me/portraits/med/women/4.jpg" height="28px">
+                            <img src="http://api.randomuser.me/portraits/med/men/1.jpg" height="28px">
+                            <img src="http://api.randomuser.me/portraits/med/women/2.jpg" height="28px">
+                            <img src="http://api.randomuser.me/portraits/med/men/3.jpg" height="28px">
+                            <img src="http://api.randomuser.me/portraits/med/men/4.jpg" width="28px" height="28px">
+                         </p>
+
+                         <p>
+                           <a href="#" class="pull-right btn btn-xs btn-default"><span class="glyphicon glyphicon-heart"></span> Favorite</a>
+                        </p>
+                    </div>
+                    
+                </div>
+               </div>
+            </div>
+         </div> 
+      </div>
+
+    </div> <!-- end of search results panels -->
+    
+    <br>
+    
+    <div class="clearfix"></div>
+      
+    <hr>
+    <div class="col-md-12 text-center">
+      <p> The Real Jamaicans &copy; </p>
+    </div>
+    <hr>
+    
+  </div>
+</div><!--/main-->
+
+<!--
+<div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h2 class="text-center"><img src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" class="img-circle"><br>Login</h2>
+      </div>
+      <div class="modal-body">
+          <form class="form col-md-12 center-block">
+            <div class="form-group">
+              <input type="text" class="form-control input-lg" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control input-lg" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary btn-lg btn-block">Sign In</button>
+              <span class="pull-right"><a href="#">Register</a></span><span><a href="#">Need help?</a></span>
+            </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+          <div class="col-md-12">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+		  </div>	
+      </div>
+  </div>
+  </div>
 </div>
 
 
-<div id="" style="overflow-y: scroll; height:50%;margin-top:-5%;">
-<accordion close-others="oneAtATime">
-    <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
-    	<img style="float:left;margin-right:5%;" src="{{group.src}}" alt="placeholder" height="35" width="35" />
-      {{group.content}}
-    </accordion-group>
-  </accordion>
+<div id="aboutModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h2 class="text-center">About</h2>
+      </div>
+      <div class="modal-body">
+          <div class="col-md-12 text-center">
+            <a href="http://www.bootply.com/DwnjTNuvVt">This Bootstrap Template</a><br>was made with <i class="glyphicon glyphicon-heart"></i> by <a href="http://bootply.com/templates">Bootply</a>
+            <br><br>
+            <a href="https://github.com/iatek/bootstrap-google-plus">GitHub Fork</a>
+          </div>
+      </div>
+      <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">OK</button>
+      </div>
+  </div>
+  </div>
 </div>
+-->
