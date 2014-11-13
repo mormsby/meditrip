@@ -19,8 +19,7 @@ Disclaimer: Will take a while to install them all, but its worth it, makes life 
 Build Commands:
 
 * `grunt` run all unit tests
-* `grunt build` compile scss,javascript and html partials to the www folder. To test simply run emulator.
-* `grunt test` watch all javascript files for changes then run all unit tests
+* `grunt build` compile scss,javascript and html partials to the www folder. To test simply run emulator. The files are also being watched for changes.
 
 Suggest more and I will add them or go ahead yourself by editing Gruntfile.js
 
