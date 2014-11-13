@@ -1,0 +1,239 @@
+/**
+ * Import Grid Styles
+ */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+/* line 1, ../../src/scss/_grid.scss */
+.grid-70 {
+  width: 70%;
+}
+
+/* line 5, ../../src/scss/_grid.scss */
+.grid-center {
+  margin: 0px auto;
+}
+
+/* line 9, ../../src/scss/style.scss */
+body {
+  background-color: #e0e0e0;
+  -webkit-font-smoothing: antialiased;
+  font: normal 14px Roboto,arial,sans-serif;
+}
+
+/* line 14, ../../src/scss/style.scss */
+.navbar-default {
+  background-color: #f4f4f4;
+  margin-top: 50px;
+  border-width: 0;
+  z-index: 5;
+}
+
+/* line 15, ../../src/scss/style.scss */
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > li:hover > a {
+  border: 0 solid #4285f4;
+  border-bottom-width: 2px;
+  font-weight: 800;
+  background-color: transparent;
+}
+
+/* line 16, ../../src/scss/style.scss */
+.navbar-default .dropdown-menu {
+  background-color: #ffffff;
+}
+
+/* line 17, ../../src/scss/style.scss */
+.navbar-default .dropdown-menu li > a {
+  padding-left: 30px;
+}
+
+/* line 19, ../../src/scss/style.scss */
+.header {
+  background-color: #ffffff;
+  border-width: 0;
+}
+
+/* line 20, ../../src/scss/style.scss */
+.header .navbar-collapse {
+  background-color: #ffffff;
+}
+
+/* line 21, ../../src/scss/style.scss */
+.btn, .form-control, .panel, .list-group, .well {
+  border-radius: 1px;
+  box-shadow: 0 0 0;
+}
+
+/* line 22, ../../src/scss/style.scss */
+.form-control {
+  border-color: #d7d7d7;
+}
+
+/* line 23, ../../src/scss/style.scss */
+.btn-primary {
+  border-color: transparent;
+}
+
+/* line 24, ../../src/scss/style.scss */
+.btn-primary, .label-primary, .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+  background-color: #4285f4;
+}
+
+/* line 25, ../../src/scss/style.scss */
+.btn-plus {
+  background-color: #ffffff;
+  border-width: 1px;
+  border-color: #dddddd;
+  box-shadow: 1px 1px 0 #999999;
+  border-radius: 3px;
+  color: #666666;
+  text-shadow: 0 0 1px #bbbbbb;
+}
+
+/* line 26, ../../src/scss/style.scss */
+.well, .panel {
+  border-color: #d2d2d2;
+  box-shadow: 0 1px 0 #cfcfcf;
+  border-radius: 3px;
+}
+
+/* line 27, ../../src/scss/style.scss */
+.btn-success, .label-success, .progress-bar-success {
+  background-color: #65b045;
+}
+
+/* line 28, ../../src/scss/style.scss */
+.btn-info, .label-info, .progress-bar-info {
+  background-color: #a0c3ff;
+  border-color: #a0c3ff;
+}
+
+/* line 29, ../../src/scss/style.scss */
+.btn-danger, .label-danger, .progress-bar-danger {
+  background-color: #dd4b39;
+}
+
+/* line 30, ../../src/scss/style.scss */
+.btn-warning, .label-warning, .progress-bar-warning {
+  background-color: #f4b400;
+  color: #444444;
+}
+
+/* line 32, ../../src/scss/style.scss */
+hr {
+  border-color: #ececec;
+}
+
+/* line 33, ../../src/scss/style.scss */
+button {
+  outline: 0;
+}
+
+/* line 36, ../../src/scss/style.scss */
+textarea {
+  resize: none;
+  outline: 0;
+}
+
+/* line 40, ../../src/scss/style.scss */
+.panel .btn i, .btn span {
+  color: #666666;
+}
+
+/* line 43, ../../src/scss/style.scss */
+.panel .panel-heading {
+  background-color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  color: #262626;
+  border-color: #ffffff;
+}
+
+/* line 50, ../../src/scss/style.scss */
+.panel .panel-heading a {
+  font-weight: 400;
+  font-size: 11px;
+}
+
+/* line 54, ../../src/scss/style.scss */
+.panel .panel-default {
+  border-color: #cccccc;
+}
+
+/* line 57, ../../src/scss/style.scss */
+.panel .panel-thumbnail {
+  padding: 0;
+}
+
+/* line 60, ../../src/scss/style.scss */
+.panel .img-circle {
+  width: 50px;
+  height: 50px;
+}
+
+/* line 64, ../../src/scss/style.scss */
+.list-group-item:first-child, .list-group-item:last-child {
+  border-radius: 0;
+}
+
+/* line 67, ../../src/scss/style.scss */
+h3, h4, h5 {
+  border: 0 solid #efefef;
+  border-bottom-width: 1px;
+  padding-bottom: 10px;
+}
+
+/* line 72, ../../src/scss/style.scss */
+.modal-dialog {
+  width: 450px;
+}
+
+/* line 75, ../../src/scss/style.scss */
+.modal-footer {
+  border-width: 0;
+}
+
+/* line 78, ../../src/scss/style.scss */
+.dropdown-menu {
+  background-color: #f4f4f4;
+  border-color: #f0f0f0;
+  border-radius: 0;
+  margin-top: -1px;
+}
+
+/* end theme */
+/* template layout*/
+/* line 87, ../../src/scss/style.scss */
+#subnav {
+  position: fixed;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  /* line 93, ../../src/scss/style.scss */
+  #subnav {
+    padding-top: 6px;
+  }
+}
+/* line 98, ../../src/scss/style.scss */
+#main {
+  padding-top: 120px;
+}
+
+/* line 102, ../../src/scss/style.scss */
+.well .media-body {
+  width: 10%;
+  padding-left: 10%;
+}
+
+/* line 107, ../../src/scss/style.scss */
+.well .media img.media-object {
+  width: 100px;
+}
+
+/* line 110, ../../src/scss/style.scss */
+.navbar-form.nav-search {
+  margin-top: 4%;
+}
+/* line 113, ../../src/scss/style.scss */
+.navbar-form.nav-search .input-group {
+  width: 500px;
+}

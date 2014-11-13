@@ -6,10 +6,10 @@ module.exports = function(grunt) {
     compass: {                  // Task
       dist: {                   // Target
         options: {              // Target options
-          sassDir: '../src/scss',
-          cssDir: '../www/lib',
-          imagesDir: '../img',
-          imagesPath: '../www/img',
+          sassDir: 'src/scss',
+          cssDir: 'www/lib',
+          imagesDir: 'img',
+          imagesPath: 'www/img',
           environment: 'development'
         }
       }
@@ -22,27 +22,27 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          '../www/lib/script.js': ['../src/js/*.js','../src/js/**/*.js']
+          'www/lib/script.js': ['src/js/*.js','src/js/**/*.js']
         }
       }
     },
     html2js: {
       options: {
         module: 'MTPartials',
-        base: '../src/'    
+        base: 'src/'    
       },
       main: {
-        src: ['../src/partials/*.html','../src/partials/**/*.html'],
-        dest: '../www/lib/partials.js'
+        src: ['src/partials/*.html','src/partials/**/*.html'],
+        dest: 'www/lib/partials.js'
       },
     },
     karma: {
       options: {
         files: [
-          '../src/vendor/angular.min.js',
-          '../src/vendor/**/*.js',
-          '../src/js/**/*.js',
-          '../test/**/*.js'
+          'src/vendor/angular.min.js',
+          'src/vendor/**/*.js',
+          'src/js/**/*.js',
+          'test/**/*.js'
         ],
         frameworks: ['jasmine'],
         runnerPort: 9999,
@@ -60,7 +60,7 @@ module.exports = function(grunt) {
     },
     watch: {
       karma: {
-        files: ['../src/js/**/*.js','../test/**/*.js'],
+        files: ['src/js/**/*.js','test/**/*.js'],
         tasks: ['karma:live:run'] //NOTE the :run flag
       }
     }

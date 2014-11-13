@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Logs
 logs
 *.log
@@ -27,9 +27,6 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
-=======
-/www/lib/
-/build/npm-debug.log
-/build/.sass-cache/
-/build/node_modules/
->>>>>>> develop
+
+npm-debug.log
+.sass-cache/

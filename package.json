@@ -11,5 +11,18 @@
   },
   "dependencies": {
     "express": "4.10.2"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-compass": "~0.7.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-html2js": "~0.2.4",
+    "grunt-karma": "~0.6.2",
+    "karma": "~0.10.9",
+    "karma-phantomjs-launcher": "~0.1.1",
+    "karma-requirejs": "~0.2.1",
+    "node-dev": "^2.6.0",
+    "requirejs": "~2.1.10"
   }
 }
