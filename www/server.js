@@ -1,14 +1,16 @@
 
 var envKey = process.env.NODE_ENV || "local";
-var env = {
+var environments = {
 	local: {
 		port: 8888
 	},
 	heroku: {
 		port: 80
 	}
-}[envKey]; 
+};
+environments.development = environments.local; 
 
+var env = environments[envKey];
 var express = require('express');
 
 var app = express();
