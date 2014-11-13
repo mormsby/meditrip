@@ -5,7 +5,7 @@ var env = {
 		port: 8888
 	},
 	heroku: {
-		port: 80
+		port: 8081
 	}
 }[envKey]; 
 
