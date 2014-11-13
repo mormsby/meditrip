@@ -91,6 +91,25 @@ angular.module("MTApp").directive("match", [ "$parse", function($parse) {
     };
 } ]);
 
+angular.module("MTApp").directive("ga", [ function() {
+    return {
+        link: function(scope, element, attrs, ctrl) {
+            (function(i, s, o, g, r, a, m) {
+                i["GoogleAnalyticsObject"] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments);
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m);
+            })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
+            ga("create", "UA-56699909-1", "auto");
+            ga("send", "pageview");
+        }
+    };
+} ]);
+
 angular.module("MTApp").factory("CommonService", [ "$location", function($location) {
     var prepUser = function(user) {
         var user = angular.copy(user);
