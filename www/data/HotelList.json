@@ -9,8 +9,8 @@ callback=angular.callbacks._0([
     	"ownerDetails":[
     			{
     				"ownerName": "Ormsby mother", 
-    				"tele1": "12321321", 
-    				"tele2": " 23o 2o3 ",
+    				"tele1": "(876) 232-3343", 
+    				"tele2": "(876) 334-2340",
     				"email1": "sapdofnaso@gmail.com", 
     				"email2":""
     			}] , 
@@ -43,7 +43,7 @@ callback=angular.callbacks._0([
     	"ownerDetails":[
     			{
     				"ownerName": "", 
-    				"tele1": "", 
+    				"tele1": "(876) 493-2343", 
     				"tele2": "",
     				"email1": "", 
     				"email2":""
@@ -78,7 +78,7 @@ callback=angular.callbacks._0([
     	"ownerDetails":[
     			{
     				"ownerName": "Mr. Perkins", 
-    				"tele1": "332-2333", 
+    				"tele1": "(876) 332-2333", 
     				"tele2": "",
     				"email1": "", 
     				"email2":""
@@ -110,7 +110,7 @@ callback=angular.callbacks._0([
     	"ownerDetails":[
     			{
     				"ownerName": "Dr. TP Lecky", 
-    				"tele1": "234-3343", 
+    				"tele1": "(876) 234-3343", 
     				"tele2": "",
     				"email1": "", 
     				"email2":""

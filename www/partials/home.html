@@ -40,7 +40,7 @@
            <div class="panel-heading">
             <h4>
              {{hotel.hotelName}} 
-              <a href="#" class="pull-right btn btn-primary" ga-track-click ga-event-category="Booking" ga-event-action="Book" ga-event-label="{{hotel.type}}" ng-click="open()">
+              <a href="#" class="pull-right btn btn-primary" ga-track-click ga-event-category="Booking" ga-event-action="Book" ga-event-label="{{hotel.type}}" ng-click="open({{hotel.ownerDetails}})">
                 <span class="glyphicon glyphicon-calendar" style="color:white;"></span> 
                 Book Now 
               </a>

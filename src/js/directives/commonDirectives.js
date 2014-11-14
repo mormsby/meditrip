@@ -8,8 +8,7 @@ angular.module('MTApp').directive('ga', ['$window', 'MTAppConstants', function($
 			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 			
 			$window.ga('create', MTAppConstants.gaKey, 'auto');
-			$window.ga('send', 'pageview');
-			
+			$window.ga('send', 'pageview');	
 		}
 	}
 }]);

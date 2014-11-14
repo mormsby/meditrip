@@ -14,10 +14,15 @@ angular.module('MTApp').controller('HomeController',['$scope','$location', 'Data
 		 	 	});
      };
 
-     $scope.open = function () {
+     $scope.open = function (contactDetails) {
 	   var modalInstance = $modal.open({
 	     templateUrl: 'partials/myModalContent.html',
-	     controller: 'ModalInstanceCtrl'
+	     controller: 'ModalInstanceCtrl',
+	     resolve :{
+	     	contactDetails : function(){
+	     		return contactDetails;
+	     	}
+	     }
 	   });
 	 };
 

@@ -56,16 +56,23 @@ angular.module("MTApp").controller("HomeController", [ "$scope", "$location", "D
             console.error(response);
         });
     };
-    $scope.open = function() {
+    $scope.open = function(contactDetails) {
         var modalInstance = $modal.open({
             templateUrl: "partials/myModalContent.html",
-            controller: "ModalInstanceCtrl"
+            controller: "ModalInstanceCtrl",
+            resolve: {
+                contactDetails: function() {
+                    return contactDetails;
+                }
+            }
         });
     };
     $scope.setupHospitalData();
 } ]);
 
-angular.module("MTApp").controller("ModalInstanceCtrl", function($scope, $modalInstance) {
+angular.module("MTApp").controller("ModalInstanceCtrl", function($scope, $modalInstance, contactDetails) {
+    $scope.contactDetails = contactDetails;
+    console.log(contactDetails);
     $scope.ok = function() {
         $modalInstance.dismiss("cancel");
     };
