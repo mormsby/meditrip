@@ -34,7 +34,7 @@
   <div class="row">
   	<div class="col-md-12"><h2>Search Results <span ng-show="query != null && query !=''">: {{query}}</span></h2></div>
       
-      <div class="col-md-6 col-sm-6" ng-repeat="hotel in hotels | filter:query" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
+      <div class="col-md-6 col-sm-6" ng-repeat="hotel in hotels | orderBy:'cost' | filter:query " ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
       <p class="" ng-show="hotels.length==0">No result found. Please contact us</p>
        <div class="panel panel-default">
            <div class="panel-heading">
