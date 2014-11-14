@@ -36,10 +36,12 @@ angular.module('MTApp').controller('HomeController',['$scope','$location', 'Data
 
 	 $scope.search = function () {
 	 	gaEvent.label = $scope.filterValue = $scope.query;
-	 	console.log("Searching for ", $scope.query);
-
-	 	//Send the search results, and category to 
-	 	$window.ga('send', 'event', gaEvent.category, gaEvent.action, gaEvent.label);
+	 	
+	 	if($scope.query != '' || $scope.query != null){
+			console.log("Searching for ", $scope.query, ' label: ', gaEvent.label);
+		 	//Send the search results, and category to 
+		 	$window.ga('send', 'event', gaEvent.category, gaEvent.action, gaEvent.label);
+	 	}
 	 }
 
      $scope.setupHospitalData();

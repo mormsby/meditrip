@@ -76,8 +76,10 @@ angular.module("MTApp").controller("HomeController", [ "$scope", "$location", "D
     };
     $scope.search = function() {
         gaEvent.label = $scope.filterValue = $scope.query;
-        console.log("Searching for ", $scope.query);
-        $window.ga("send", "event", gaEvent.category, gaEvent.action, gaEvent.label);
+        if ($scope.query != "" || $scope.query != null) {
+            console.log("Searching for ", $scope.query, " label: ", gaEvent.label);
+            $window.ga("send", "event", gaEvent.category, gaEvent.action, gaEvent.label);
+        }
     };
     $scope.setupHospitalData();
 } ]);
@@ -112,21 +114,6 @@ angular.module("MTApp").directive("ga", [ "$window", "MTAppConstants", function(
 } ]);
 
 angular.module("MTApp").directive("gaTrackClick", [ "$window", function($window) {
-    return {
-        link: function(scope, element, attrs, ctrl) {
-            $(element).on("click", function() {
-                var gaEvent = {
-                    category: attrs.gaEventCategory,
-                    action: attrs.gaEventAction,
-                    label: attrs.gaEventLabel
-                };
-                $window.ga("send", "event", gaEvent.category, gaEvent.action, gaEvent.label);
-            });
-        }
-    };
-} ]);
-
-angular.module("MTApp").directive("gaTrackSearch", [ "$window", function($window) {
     return {
         link: function(scope, element, attrs, ctrl) {
             $(element).on("click", function() {
