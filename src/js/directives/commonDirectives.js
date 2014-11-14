@@ -28,3 +28,22 @@ angular.module('MTApp').directive('gaTrackClick', ['$window', function($window){
 	}
 }]);
 
+
+//Track search results. Will wait about 5seconds before sending that results
+angular.module('MTApp').directive('gaTrackSearch', ['$window', function($window){
+	return {
+		link: function(scope,element,attrs,ctrl) {
+			$(element).on('click', function(){
+				var gaEvent = {
+					category: attrs.gaEventCategory,
+					action: attrs.gaEventAction,
+					label: attrs.gaEventLabel
+				};
+
+				//Send the search results to GA
+				$window.ga('send', 'event', gaEvent.category, gaEvent.action, gaEvent.label);
+			});
+		}
+	}
+}]);
+

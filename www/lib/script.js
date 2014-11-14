@@ -45,8 +45,15 @@ var DATA_PATH = {
 
 angular.module("MTApp.constants", []).constant("CONST", CONST).constant("ERROR_MSG", ERROR_MSG).constant("URI_PATH", URI_PATH).constant("DATA_PATH", DATA_PATH);
 
-angular.module("MTApp").controller("HomeController", [ "$scope", "$location", "DataService", "$modal", function($scope, $location, DataService, $modal) {
+angular.module("MTApp").controller("HomeController", [ "$scope", "$location", "DataService", "$modal", "$window", function($scope, $location, DataService, $modal, $window) {
     $scope.hotels;
+    $scope.filterValue;
+    $scope.query;
+    var gaEvent = {
+        category: "Search",
+        action: "Searching",
+        label: ""
+    };
     $scope.setupHospitalData = function() {
         DataService.getHotelList().then(function(response) {
             $scope.hotels = response.data;
@@ -66,6 +73,11 @@ angular.module("MTApp").controller("HomeController", [ "$scope", "$location", "D
                 }
             }
         });
+    };
+    $scope.search = function() {
+        gaEvent.label = $scope.filterValue = $scope.query;
+        console.log("Searching for ", $scope.query);
+        $window.ga("send", "event", gaEvent.category, gaEvent.action, gaEvent.label);
     };
     $scope.setupHospitalData();
 } ]);
@@ -100,6 +112,21 @@ angular.module("MTApp").directive("ga", [ "$window", "MTAppConstants", function(
 } ]);
 
 angular.module("MTApp").directive("gaTrackClick", [ "$window", function($window) {
+    return {
+        link: function(scope, element, attrs, ctrl) {
+            $(element).on("click", function() {
+                var gaEvent = {
+                    category: attrs.gaEventCategory,
+                    action: attrs.gaEventAction,
+                    label: attrs.gaEventLabel
+                };
+                $window.ga("send", "event", gaEvent.category, gaEvent.action, gaEvent.label);
+            });
+        }
+    };
+} ]);
+
+angular.module("MTApp").directive("gaTrackSearch", [ "$window", function($window) {
     return {
         link: function(scope, element, attrs, ctrl) {
             $(element).on("click", function() {

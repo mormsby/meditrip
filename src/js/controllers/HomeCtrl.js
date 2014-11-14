@@ -1,7 +1,15 @@
-angular.module('MTApp').controller('HomeController',['$scope','$location', 'DataService', '$modal', function($scope, $location, DataService, $modal){
+angular.module('MTApp').controller('HomeController',['$scope','$location', 'DataService', '$modal', '$window', function($scope, $location, DataService, $modal, $window){
 	
 	$scope.hotels;	//Store the list of hotels
-	
+	$scope.filterValue;	//Store the search results.
+	$scope.query;	//Search result will be stored here 
+	var gaEvent = {
+					category: 'Search',
+					action: 'Searching',
+					label: ''
+				};
+
+
 	//Get the data from hotels json file
 	$scope.setupHospitalData = function (){
     	 DataService.getHotelList()
@@ -25,6 +33,14 @@ angular.module('MTApp').controller('HomeController',['$scope','$location', 'Data
 	     }
 	   });
 	 };
+
+	 $scope.search = function () {
+	 	gaEvent.label = $scope.filterValue = $scope.query;
+	 	console.log("Searching for ", $scope.query);
+
+	 	//Send the search results, and category to 
+	 	$window.ga('send', 'event', gaEvent.category, gaEvent.action, gaEvent.label);
+	 }
 
      $scope.setupHospitalData();
 }]);

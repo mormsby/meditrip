@@ -15,7 +15,7 @@
               <div class="input-group" style="">
                 <input accesskey="/" type="text" class="form-control" placeholder="Search by procedure, hotel, cost.." name="srch-term" id="srch-term" ng-model="query">
                 <div class="input-group-btn">
-                  <button class="btn btn-default btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                  <button class="btn btn-default btn-primary" type="submit"><i class="glyphicon glyphicon-search" ng-click="search()"></i></button>
                 </div>
               </div>
           </form>
@@ -32,9 +32,9 @@
 <!--main-->
 <div class="container" id="main">
   <div class="row">
-  	<div class="col-md-12"><h2>Search Results <span ng-show="query != null && query !=''">: {{query}}</span></h2></div>
+  	<div class="col-md-12"><h2>Search Results <span ng-show="filterValue != null && filterValue !=''">: {{query}}</span></h2></div>
       
-      <div class="col-md-6 col-sm-6" ng-repeat="hotel in hotels | orderBy:'cost' | filter:query " ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
+      <div class="col-md-6 col-sm-6" ng-repeat="hotel in hotels | orderBy:'cost' | filter:filterValue " ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
       <p class="" ng-show="hotels.length==0">No result found. Please contact us</p>
        <div class="panel panel-default">
            <div class="panel-heading">
